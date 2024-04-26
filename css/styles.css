@@ -107,6 +107,12 @@ img {
 
 .header-logo-link {
   margin-right: 29px;
+  transition: opacity 250ms linear;
+}
+
+.header-logo-link:hover,
+.header-logo-link:focus {
+  opacity: 0.5;
 }
 
 .header-nav-list {
@@ -142,6 +148,17 @@ img {
 .header-list-link:focus {
   opacity: 0.5;
 }
+
+.header-nav-icon {
+  transition: fill-opacity 250ms linear, stroke-opacity 250ms linear;
+}
+
+.header-nav-link:hover + .header-nav-icon,
+.header-nav-link:focus + .header-nav-icon {
+  fill-opacity: 0.5;
+  stroke-opacity: 0.5;
+}
+
 /*----------------------------------------------------------------------*/
 
 /*---------------------------------HERO---------------------------------*/
@@ -150,7 +167,7 @@ img {
   display: flex;
 }
 
-.hero-wrapper-left {
+.hero-wrapper {
   padding: 75px 48px;
 }
 
@@ -223,10 +240,6 @@ img {
 .hero-item-link:hover,
 .hero-item-link:focus {
   color: #cb4908;
-}
-
-.hero-wrapper-right {
-  flex-shrink: 0;
 }
 /*----------------------------------------------------------------------*/
 
@@ -397,12 +410,10 @@ img {
 }
 
 .about-brands-btn {
+  padding: 0;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50px;
   height: 20px;
   font-size: 16px;
@@ -586,5 +597,100 @@ img {
 .offers-link:focus {
   color: #ffffff;
   background-color: #414141;
+}
+/*----------------------------------------------------------------------*/
+
+/*-------------------------------FOOTER---------------------------------------*/
+.footer {
+  padding: 120px 0 96px;
+  background-color: #171717;
+}
+
+.footer-wrapper-top {
+  margin-bottom: 97px;
+  display: flex;
+  gap: 198px;
+}
+
+.footer-logo-link {
+  transition: fill 250ms linear;
+}
+
+.footer-logo-link:hover,
+.footer-logo-link:focus {
+  fill: #fff;
+}
+
+.footer-top-inner {
+  display: flex;
+  gap: 150px;
+  flex-grow: 1;
+}
+
+.footer-list {
+  flex-basis: calc((100% - 300px) / 3);
+}
+
+.footer-list-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.footer-list-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.footer-list-link {
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: #bcbdbd;
+  transition: color 250ms linear;
+}
+
+.footer-list-link:hover,
+.footer-list-link:focus {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-wrapper-middle {
+  margin-bottom: 131px;
+  display: flex;
+  gap: 192px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-social-link {
+  transition: fill 250ms linear;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  fill: #fff;
+}
+
+.footer-app-list {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-app-link {
+  transition: transform 250ms linear;
+}
+
+.footer-app-link:hover,
+.footer-app-link:focus {
+  transform: scale(1.1);
+}
+
+.footer-copyright {
+  font-size: 12px;
+  line-height: 1.33;
+  color: #bcbdbd;
 }
 /*----------------------------------------------------------------------*/
